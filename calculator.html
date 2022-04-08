@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<style type="text/css">
+/*----------------------------------------------------------------------------------------------------------
+
+div{
+	background-color: green;
+	width: 200px;
+	height: 200px;
+
+}
+input{
+	background-color: red;*/
+
+.container{
+	margin-left: 430px;
+
+}
+
+
+
+table{
+    background-color: black;
+	border:8px solid #3D0000;
+
+}
+input{
+	width:500px;
+	height:70px;
+	background-color: blue;
+	color: yellow;
+	font-size: 30px;
+	padding-left: 10px;
+
+}
+button{
+	width: 100px;
+	height: 110px;
+	font-size: 35px;
+}
+h2{
+	color: red;
+	font-size: 60px;
+	
+    margin-right: 200px;
+
+
+
+
+
+}
+body{
+	background-color: orange;
+	background-image: url("iron.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+
+
+	</style>
+	<title>Calculator</title>
+	<link rel="shortcut icon" href="calculator.jpg">
+
+
+
+
+</head>
+<body><!--
+	
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h2>Create a New legend</h2>
+<div id="mydiv">
+
+
+
+</div>
+<input placeholder="Enter the legend" id="myinput"><br><br>
+<button onclick="check()">submit</button>
+-->
+
+<div class="container">
+<h2>Welcome to  the Calculator</h2>
+<table>
+<tr><td colspan="5"><input id="il" class="input"></td></tr>
+<tr>
+<td><button onclick="send(1)">1</button></td>
+<td><button onclick="send(2)">2</button></td>
+<td><button onclick="send(3)">3</button></td>
+<td><button onclick="send(4)">4</button></td>
+<td><button onclick="send(5)">5</button></td>
+</tr>
+
+<tr>
+<td><button onclick="send(6)">6</button></td>	
+<td><button onclick="send(7)">7</button></td>
+<td><button onclick="send(8)">8</button></td>
+<td><button onclick="send(9)">9</button></td>
+<td><button onclick="send(0)">0</button></td>
+</tr>
+
+<tr>
+<td><button onclick="send('+')">+</button></td>	
+<td><button onclick="send('-')">-</button></td>
+<td><button onclick="send('/')">/</button></td>
+<td><button onclick="send('*')">*</button></td>
+<td><button onclick="send('=')" style="background-color: #FFD93D; color: white;">=</button></td>
+</tr>
+
+<tr>
+<td><button onclick="send('log')">log</button></td>	
+<td><button onclick="send('square')">X<sup>2</sup></button></td>
+<td><button onclick="send('.')">.</button></td>
+<td><button onclick="send('root')">&#8730</button></td>
+<td><button onclick="send('AC')" style="background-color: red;color:white;">AC</button></td>
+</tr>
+
+
+
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">/*
+------------------------------------------------------------------------------------------------------------
+function check(){
+
+value = document.getElementById("myinput").value;
+element = document.createElement("p");
+text = document.createTextNode(value);
+element.appendChild(text);
+mydiv = document.getElementById("mydiv");
+mydiv.appendChild(element)
+
+
+
+}
+*/
+function send(i){
+
+	x = document.getElementById("il");
+	switch(i){
+		        case 1:  x.value+= 1;  break;
+		        case 2:  x.value+= 2;  break;
+		        case 3:  x.value+= 3;  break;
+		        case 4:  x.value+= 4;  break;
+		        case 5:  x.value+= 5;  break;
+		        case 6:  x.value+= 6;  break;
+		        case 7:  x.value+= 7;  break;
+		        case 8:  x.value+= 8;  break;
+		        case 9:  x.value+= 9;  break;
+		        case 0:  x.value+= 0;  break;
+
+		        case '+':  x.value+= '+';  break;
+		        case '-':  x.value+= '-';  break;
+		        case '/':  x.value+= '/';  break;
+		        case '*':  x.value+= '*';  break;
+		        case '.':  x.value+= '.';  break;
+		         case 'AC':  x.value= ' ';  break;  
+
+
+		           
+		            break;
+		           
+		           case'=':
+		                   result=eval(x.value);
+		                   x.value=result;
+		            break;
+                    
+                      case'log':
+		                   result=eval(Math.log10(x.value));
+		                   x.value=result;
+		            break;
+
+                      case'root':
+		                   result=eval(Math.sqrt(x.value));
+		                   x.value=result;
+		            break;
+
+		            case'square':
+		                   result=eval(Math.pow(x.value, 2));
+		                   x.value=result;
+
+		            
+
+	}
+}
+
+
+	
+</script>
+
+</body>
+</html>
