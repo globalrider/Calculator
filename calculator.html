@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 
 	<style type="text/css">
-/*----------------------------------------------------------------------------------------------------------
 
-div{
-	background-color: green;
-	width: 200px;
-	height: 200px;
 
-}
-input{
-	background-color: red;*/
+  /* For mobile phones: */
+
+	
+  
 
 .container{
 	margin-left: 430px;
+
 
 }
 
@@ -44,8 +42,9 @@ button{
 h2{
 	color: red;
 	font-size: 60px;
+	text-align: center;
 	
-    margin-right: 200px;
+    margin-right: 1px;
 
 
 
@@ -59,6 +58,29 @@ body{
 	background-size: cover;
 
 }
+
+@media only screen and (max-width: 760px) {
+  /* For mobile phones: */
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .container {
+  	margin: auto;
+  }
+  button{
+	width: 50px;
+	height: 55px;
+	font-size: 20px;
+}
+tr {
+	width: 250px;
+}
+
+input {
+	width:250px;
+}
+}  
 
 
 
@@ -84,9 +106,9 @@ body{
 <input placeholder="Enter the legend" id="myinput"><br><br>
 <button onclick="check()">submit</button>
 -->
-
-<div class="container">
 <h2>Welcome to  the Calculator</h2>
+<div class="container">
+
 <table>
 <tr><td colspan="5"><input id="il" class="input"></td></tr>
 <tr>
